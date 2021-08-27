@@ -1,0 +1,8 @@
+open3d==0.13.0
+opencv-python==4.5.3.56
+tqdm==4.62.1
+trimesh==3.9.27
+vedo==2021.0.3
+vtk==9.0.3
+pytorch3d==0.3.0
+pyvista==0.31.3
