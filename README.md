@@ -115,12 +115,14 @@ index = 0
 
 # Concepts
 
-## Watertight mesh
-In computer graphics, a watertight mesh refers to a triangular mesh consisting of one closed surface. This loose definition rules out the following two cases which frequently cause problems when voxelizing meshes into occupancy grids or signed distance functions: 
-
-* The mesh has holes which prevent a clear definition of inside and outside; 
-* or the mesh contains structure within the main surface, hindering signed distance function computation.
-
-However, automatically obtaining watertight meshes is difficult. First of all, it is non-trivial to fix larger holes; and second, irrelevant inner structures are difficult to identify.
+## Triangle mesh
+A triangle mesh has several properties that can be tested:
+* the manifold property, where we can test the triangle mesh if it is edge manifold is_edge_manifold and if it is is_vertex_manifold. 
+* A triangle mesh is edge manifold, if each edge is bounding either one or two triangles. 
+* Triangle mesh is vertex manifold if the star of the vertex is edge-manifold and edge-connected, e.g., two or more faces connected only by a vertex and not by an edge. Another property is the test of self-intersection. 
+* A watertight mesh can be defined as a mesh that is edge manifold, vertex manifold and not self intersecting. 
+* if it is orientable, i.e. the triangles can be oriented in such a way that all normals point towards the outside. 
 
 [More info](https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/)
+
+There is a function to check those properties in this project **/mesh/manager** -> **check_mesh_properties**
