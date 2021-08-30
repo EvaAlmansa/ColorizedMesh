@@ -1,5 +1,12 @@
 
-### Example of a [3D rotating plot](http://htmlpreview.github.com/?https://github.com/EvaAlmansa/ColorizedMesh/blob/master/testing_embryo.html)  
+# Description
+This repository contains two general functions where is possible to get:
+
+|   Function   |   Description |  Example |  
+|----------|:--------------|:--------------|
+| [projection_mesh_to_image](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/mesh/manager.py#L188) | A projection of mesh to equirectangular image (JPG file) | ![Project_mesh2equi](/docs/living_room4_1_projected.jpg)<!-- .element height="50%" width="50%" --> |
+| [occluded_point_map](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/colorized_mesh/colorized_mesh.py#140) | A occluded point map from mesh and furniture (PLY file) | ![occluded_point_map](/docs/living_room4_1.jpg) |
+
 
 # Table of Contents
 1. [Quick start](#quick-start)
