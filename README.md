@@ -2,10 +2,10 @@
 # Description
 This repository contains two general functions where is possible to get:
 
-| Function |   Description |  Input |  Result |
-|----------|:--------------|:--------------|:--------------|
-| [projection_mesh_to_image](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/mesh/manager.py#L188) | A projection of mesh to equirectangular image (JPG file) | ![equi_img](/docs/living_room4_1.jpg)  ![mesh](/docs/living_room4_1_mesh.png)<!-- .element height="50%" width="50%" -->  | ![project_mesh2equi](/docs/living_room4_1_projected.jpg) |
-| [occluded_point_map](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/colorized_mesh/colorized_mesh.py#140) | A occluded point map from mesh and furniture (PLY file) | ![compl_mesh](/docs/living_room4_1_furniture_mesh.png) | ![occluded_point_map](/docs/living_room4_1_occl_map.jpg) |
+| Function |  Input |  Result |
+|:--------------|:--------------|:--------------|
+| A projection of mesh to equirectangular image (JPG file): [projection_mesh_to_image](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/mesh/manager.py#L188) | ![equi_img](/docs/living_room4_1.jpg) ![mesh](/docs/living_room4_1_mesh.png)<!-- .element height="50%" width="50%" -->  | ![project_mesh2equi](/docs/living_room4_1_projected.jpg) |
+| A occluded point map from mesh and furniture (PLY file): [occluded_point_map](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/colorized_mesh/colorized_mesh.py#140) | ![compl_mesh](/docs/living_room4_1_furniture_mesh.png) | ![occluded_point_map](/docs/living_room4_1_occl_map.jpg) |
 
 
 # Table of Contents
@@ -31,6 +31,7 @@ $ make quick-start
 ├── dataset
 |   ├── [...]
 |   ├── README.md
+├── docs
 ├── mesh
 │   ├── manager.py
 │   ├── projection_img_mesh.py
