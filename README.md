@@ -2,10 +2,10 @@
 # Description
 This repository contains two general functions where is possible to get:
 
-|   Function   |   Description |  Example |  
-|----------|:--------------|:--------------|
-| [projection_mesh_to_image](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/mesh/manager.py#L188) | A projection of mesh to equirectangular image (JPG file) | ![Project_mesh2equi](/docs/living_room4_1_projected.jpg)<!-- .element height="50%" width="50%" --> |
-| [occluded_point_map](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/colorized_mesh/colorized_mesh.py#140) | A occluded point map from mesh and furniture (PLY file) | ![occluded_point_map](/docs/living_room4_1.jpg) |
+| Function |   Description |  Input |  Result |
+|----------|:--------------|:--------------|:--------------|
+| [projection_mesh_to_image](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/mesh/manager.py#L188) | A projection of mesh to equirectangular image (JPG file) | ![equi_img](/docs/living_room4_1.jpg)  ![mesh](/docs/living_room4_1_mesh.png)<!-- .element height="50%" width="50%" -->  | ![project_mesh2equi](/docs/living_room4_1_projected.jpg) |
+| [occluded_point_map](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/colorized_mesh/colorized_mesh.py#140) | A occluded point map from mesh and furniture (PLY file) | ![compl_mesh](/docs/living_room4_1_furniture_mesh.png) | ![occluded_point_map](/docs/living_room4_1_occl_map.jpg) |
 
 
 # Table of Contents
@@ -121,7 +121,9 @@ index = 0
 
 # Concepts
 
-## Triangle mesh
+## Triangle mesh 
+[Reference](http://www.open3d.org/docs/release/tutorial/geometry/mesh.html#Mesh-properties)
+
 A triangle mesh has several properties that can be tested:
 * the manifold property, where we can test the triangle mesh if it is edge manifold is_edge_manifold and if it is is_vertex_manifold. 
 * A triangle mesh is edge manifold, if each edge is bounding either one or two triangles. 
@@ -131,4 +133,4 @@ A triangle mesh has several properties that can be tested:
 
 [More info](https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/)
 
-There is a function to check those properties in this project **/mesh/manager** -> **check_mesh_properties**
+There is a function to check those properties in this project [here](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/mesh/manager.py#L82).

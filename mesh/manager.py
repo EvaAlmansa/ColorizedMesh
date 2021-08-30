@@ -225,6 +225,7 @@ def visualizer_mesh_furniture(args, mesh_names, furniture_ext='obj'):
         furniture = Mesh(furniture_vtk, c='grey')
         
         show(mesh_name, mesh, furniture)
+        show(mesh)
 
 
 def write_vtk_file(mesh, mesh_vtk):
