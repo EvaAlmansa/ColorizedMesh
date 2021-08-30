@@ -9,6 +9,18 @@ def _cuda_parser(parser):
 
 
 def _general_settings_parser(parser):
+    conf_modes = ['DEFAULT']
+
+    parser.add_argument(
+        '--config_file', 
+        required = True,
+        help = 'Configuration file.'
+    )
+    parser.add_argument(
+        '--config', 
+        default='DEFAULT',
+        help='Configuration mode which is one option in configuration file: ' + ' | '.join(conf_modes) + '. (Default: DEFAULT)'
+    )
     parser.add_argument(
         '--complete_data_path', 
         help='If the dataset is in the same path as the project this flag should be False'
@@ -20,8 +32,6 @@ def _general_settings_parser(parser):
 
 
 def _initialization_parser(parser):
-    conf_modes = ['PATHS', 'MESH', 'SUBDIVIDE']
-
     parser.add_argument(
         '--img_path', 
     )
@@ -38,23 +48,13 @@ def _initialization_parser(parser):
         '--mesh_name', 
         help ='Pick a mesh name to visualize (OBJ file). None for visualize all data. (Default: None)'
     )
-    parser.add_argument(
-        '--config_file', 
-        required = True,
-        help = 'Configuration file.'
-    )
-    parser.add_argument(
-        '--config', 
-        default='DEFAULT',
-        help='Configuration mode which is one option in configuration file: ' + ' | '.join(conf_modes) + '. (Default: DEFAULT)'
-    )
 
 
 def _subdivide_parser(parser):
     parser.add_argument(
         '--nsubd', 
         type=int,
-        help='Number of subdivisions. Each subdivision creates 4 new triangles, so the number of resulting'/ 
+        help='Number of subdivisions. Each subdivision creates 4 new triangles, so the number of resulting'  
         ' triangles is nface*4**nsub where nface is the current number of faces. (Default: 0)'
     )
     parser.add_argument(
@@ -71,5 +71,6 @@ def argument_parser():
     _cuda_parser(parser)
     _general_settings_parser(parser)
     _initialization_parser(parser)
+    _subdivide_parser(parser)
 
     return parser.parse_args()

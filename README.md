@@ -1,11 +1,11 @@
 
 # Description
-This repository contains two general functions where is possible to get:
+This repository contains two general functions where it is possible to get:
 
 | Function |  Input |  Result |
 |:-----------|:------------|:--------------|
 | A projection of mesh to equirectangular image (JPG file): [projection_mesh_to_image](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/mesh/manager.py#L188) | 360 image (1024x512 px) ![equi_img](/docs/living_room4_1.jpg) Boundary Mesh ![mesh](/docs/living_room4_1_mesh.png)<!-- .element height="50%" width="50%" -->  | Projected Mesh to 360º image ![project_mesh2equi](/docs/living_room4_1_projected.jpg) |
-| A occluded point map from mesh and furniture (PLY file): [occluded_point_map](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/colorized_mesh/colorized_mesh.py#140) | Boundary Mesh + Furniture![compl_mesh](/docs/living_room4_1_furniture_mesh.png) | Occluded Point Map ![occluded_point_map](/docs/living_room4_1_occl_map.jpg) Statistics about number of occluded points (CSV file) [statistics.csv](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/result/statistics.csv) |
+| A occluded point map from mesh and furniture (PLY file): [occluded_point_map](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/colorized_mesh/colorized_mesh.py#140) | Boundary Mesh + Furniture![compl_mesh](/docs/living_room4_1_furniture_mesh.png) | Occluded Point Map ![occluded_point_map](/docs/living_room4_1_occl_map.jpg) Number of occluded points Statistics (CSV file) [statistics.csv](https://github.com/EvaAlmansa/ColorizedMesh/blob/master/result/statistics.csv) |
 
 
 # Table of Contents
