@@ -1,4 +1,10 @@
 
+
+# Occluded Point Map
+| ![mesh&furniture](/docs/mesh&furniture.gif) |  ![color_mesh](/docs/colored_mesh.gif) |
+|:-----------|:------------|
+
+
 # Description
 This repository contains two general functions where it is possible to get:
 
@@ -126,9 +132,10 @@ index = 0
 [Reference](http://www.open3d.org/docs/release/tutorial/geometry/mesh.html#Mesh-properties)
 
 A triangle mesh has several properties that can be tested:
-* the manifold property, where we can test the triangle mesh if it is edge manifold is_edge_manifold and if it is is_vertex_manifold. 
-* A triangle mesh is edge manifold, if each edge is bounding either one or two triangles. 
-* Triangle mesh is vertex manifold if the star of the vertex is edge-manifold and edge-connected, e.g., two or more faces connected only by a vertex and not by an edge. Another property is the test of self-intersection. 
+* the manifold property, where the triangle mesh has to be edge manifold and vertex manifold. 
+    - A triangle mesh is edge manifold, if each edge is bounding either one or two triangles. 
+    - Triangle mesh is vertex manifold if the star of the vertex is edge-manifold and edge-connected, e.g., two or more faces connected only by a vertex and not by an edge. 
+* Another property is the self-intersection. 
 * A watertight mesh can be defined as a mesh that is edge manifold, vertex manifold and not self intersecting. 
 * if it is orientable, i.e. the triangles can be oriented in such a way that all normals point towards the outside. 
 
